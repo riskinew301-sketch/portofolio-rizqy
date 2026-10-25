@@ -127,8 +127,8 @@ export const siteContent: SiteContent = {
       fullDescription: "Laba Pintar dirancang untuk menyederhanakan perhitungan finansial kompleks bagi wirausaha dan UMKM. Memiliki fitur simulasi laba rugi interaktif, ekspor laporan otomatis, serta pemodelan beban harga pokok secara real-time.",
       category: "FinTech / Business Tool",
       techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Chart.js"],
-      githubUrl: "https://github.com/rizqynaufal/laba-pintar",
-      liveUrl: "https://laba-pintar.vercel.app",
+      githubUrl: "https://github.com/riskinew301-sketch/laba-pintar-apps",
+      liveUrl: "https://riskinew301-sketch.github.io/laba-pintar-apps/index.html",
       featured: true,
       coverImage: "/projects/laba-pintar-cover.png",
       screenshots: [
