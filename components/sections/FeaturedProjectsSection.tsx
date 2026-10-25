@@ -24,7 +24,7 @@ const projectsAsOffers: Offer[] = siteContent.projects.map((project) => ({
 // Per-project Unsplash images so each card looks distinct
 const COVER_IMAGES: Record<string, string> = {
   esl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-  "pariwisata-diy": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=600&q=80",
+  "pariwisata-diy": "/projects/pariwisata-diy-cover.png",
   "laba-pintar": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
   "bk-service-web": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
 };
