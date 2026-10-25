@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Terminal, MapPin } from "lucide-react";
+import { ArrowUpRight, Terminal, MapPin, ExternalLink } from "lucide-react";
 import { siteContent } from "@/data/content";
 import { Avatar } from "@/components/ui/Avatar";
 import { ElectricGaze } from "@/components/ui/ElectricGaze";
@@ -36,12 +36,19 @@ export const HeroSection: React.FC = () => {
               size="lg"
               showRoleBadge={true}
             />
-            <div className="flex items-center gap-2 px-3 py-1.5 border border-neon/40 bg-zinc-950/80 backdrop-blur-sm">
+            <a
+              href="https://drive.google.com/file/d/14xItd_OMgkwSYiAZdcqYdzjmniMKWy8h/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-1.5 border border-neon/40 bg-zinc-950/80 backdrop-blur-sm hover:border-neon transition-colors group cursor-pointer"
+              title="Lihat Sertifikat Google Student Ambassador"
+            >
               <span className="w-2 h-2 bg-neon rounded-full animate-ping" />
-              <span className="font-mono text-xs text-neon font-bold uppercase tracking-wider">
+              <span className="font-mono text-xs text-neon font-bold uppercase tracking-wider flex items-center gap-1.5">
                 GSA &apos;26 // SELECTED 1 OF 81,000+
+                <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" />
               </span>
-            </div>
+            </a>
           </div>
 
           {/* Location Tag */}

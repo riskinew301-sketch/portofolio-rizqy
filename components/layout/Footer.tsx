@@ -312,17 +312,14 @@ export const Footer: React.FC = () => {
 
         {/* ── BOTTOM FOOTER ROW: Social Links & Copyright ── */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-3">
             <a
               href={`mailto:${siteContent.profile.email}`}
-              className="flex items-center gap-2 px-3 py-2 border border-zinc-800 bg-zinc-900 text-zinc-300 hover:border-neon hover:text-neon transition-colors sharp-card"
+              className="p-2.5 border border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-neon hover:text-neon transition-colors sharp-card"
               aria-label="Email"
-              title="Kirim Email"
+              title={`Email: ${siteContent.profile.email}`}
             >
-              <Mail className="w-4 h-4 text-neon" />
-              <span className="text-[11px] font-mono lowercase tracking-normal">
-                {siteContent.profile.email}
-              </span>
+              <Mail className="w-4 h-4" />
             </a>
             <a
               href={siteContent.profile.github}

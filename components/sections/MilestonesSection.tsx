@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Globe, ShieldCheck } from "lucide-react";
+import { Globe, ShieldCheck, ExternalLink } from "lucide-react";
 import { siteContent } from "@/data/content";
 import { CertificateAccordion } from "@/components/ui/certificate-accordion";
 
@@ -42,9 +42,23 @@ export const MilestonesSection: React.FC = () => {
                     <Globe className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-mono text-xl font-bold text-zinc-100 group-hover:text-neon transition-colors">
-                      {milestone.title}
-                    </h3>
+                    {milestone.credentialUrl ? (
+                      <a
+                        href={milestone.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 group/link"
+                      >
+                        <h3 className="font-mono text-xl font-bold text-zinc-100 group-hover/link:text-neon transition-colors">
+                          {milestone.title}
+                        </h3>
+                        <ExternalLink className="w-4 h-4 text-zinc-500 group-hover/link:text-neon transition-colors" />
+                      </a>
+                    ) : (
+                      <h3 className="font-mono text-xl font-bold text-zinc-100 group-hover:text-neon transition-colors">
+                        {milestone.title}
+                      </h3>
+                    )}
                     <p className="font-mono text-xs text-zinc-400">
                       {milestone.organization}
                     </p>
@@ -61,9 +75,22 @@ export const MilestonesSection: React.FC = () => {
                   <span className="font-mono text-xs text-zinc-400 uppercase tracking-wider">
                     Achievement Badge
                   </span>
-                  <span className="font-mono text-xs font-bold text-neon">
-                    {milestone.badge}
-                  </span>
+                  {milestone.credentialUrl ? (
+                    <a
+                      href={milestone.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-xs font-bold text-neon hover:underline inline-flex items-center gap-1.5"
+                      title="Lihat Sertifikat Google Drive"
+                    >
+                      <span>{milestone.badge}</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  ) : (
+                    <span className="font-mono text-xs font-bold text-neon">
+                      {milestone.badge}
+                    </span>
+                  )}
                 </div>
               )}
             </div>

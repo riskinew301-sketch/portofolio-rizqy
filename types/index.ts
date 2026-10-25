@@ -20,6 +20,7 @@ export interface Milestone {
   description: string;
   badge?: string;
   highlight?: string;
+  credentialUrl?: string;
 }
 
 export interface Certification {

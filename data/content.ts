@@ -23,6 +23,7 @@ export const siteContent: SiteContent = {
       description: "Delegasi terpilih dari 81.000+ pendaftar di seluruh dunia. Memimpin inisiatif pengembangan teknologi cloud dan ekosistem AI di lingkungan perguruan tinggi.",
       badge: "Selected 1 of 81,000+",
       highlight: "Leadership & Tech Evangelism",
+      credentialUrl: "https://drive.google.com/file/d/14xItd_OMgkwSYiAZdcqYdzjmniMKWy8h/view",
     },
     {
       id: "kpn-2026",
