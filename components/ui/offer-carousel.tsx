@@ -10,6 +10,7 @@ export interface Offer {
   id: string | number;
   imageSrc: string;
   imageAlt: string;
+  imageContain?: boolean;
   tag: string;
   title: string;
   description: string;
@@ -35,12 +36,20 @@ const OfferCard = React.forwardRef<HTMLAnchorElement, OfferCardProps>(
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
     >
       {/* Background Image — top half */}
-      <div className="relative w-full h-1/2 overflow-hidden bg-zinc-800">
+      <div
+        className={cn(
+          "relative w-full h-1/2 overflow-hidden",
+          offer.imageContain ? "bg-white" : "bg-zinc-800"
+        )}
+      >
         {offer.imageSrc ? (
           <img
             src={offer.imageSrc}
             alt={offer.imageAlt}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+            className={cn(
+              "absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0",
+              offer.imageContain ? "object-contain p-5" : "object-cover"
+            )}
           />
         ) : (
           /* Fallback: neon dot-grid pattern */
@@ -50,8 +59,10 @@ const OfferCard = React.forwardRef<HTMLAnchorElement, OfferCardProps>(
             </span>
           </div>
         )}
-        {/* Scanline overlay for analog feel */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-zinc-900/60 pointer-events-none" />
+        {/* Scanline overlay for analog feel (omit on white contain backdrop) */}
+        {!offer.imageContain && (
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-zinc-900/60 pointer-events-none" />
+        )}
       </div>
 
       {/* Card Content — bottom half */}

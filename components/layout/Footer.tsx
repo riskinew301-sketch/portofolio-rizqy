@@ -161,11 +161,10 @@ export const Footer: React.FC = () => {
           {/* Identity */}
           <div className="space-y-1">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-neon font-bold">
-              <Terminal className="w-4 h-4" />
               <span>SYSTEM ARCHIVE // RIZQY NAUFAL PRADANA</span>
             </div>
             <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">
-              FRONTEND DEVELOPER &amp; GOOGLE STUDENT AMBASSADOR &apos;26 // UMBY INFORMATICS
+              JUNIOR FRONTEND DEVELOPER, BACKEND DEVELOPER, NETWORK ENGINEER &amp; GOOGLE STUDENT AMBASSADOR 2026
             </p>
           </div>
 

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { siteContent } from "@/data/content";
 import {
   Terminal,
-  Camera,
   Radio,
   Clock,
   ArrowUpRight,
@@ -69,18 +68,13 @@ export default function JournalPage() {
         <div className="border-b-2 border-zinc-800 pb-12 space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.3em] text-neon font-bold">
-              <Radio className="w-4 h-4 text-neon animate-pulse" />
-              <span>SYS.LOG // ANALOG_ARCHIVE // VOL.26</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 font-mono text-xs text-zinc-400 uppercase tracking-widest">
-              <Camera className="w-3.5 h-3.5 text-neon" />
-              <span>STREETWEAR_ZINE_EDITION</span>
+              <span>ANALOG ARCHIVE</span>
             </div>
           </div>
 
           <div className="space-y-4">
             <h1 className="font-mono text-5xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter text-zinc-100 leading-none">
-              TECHNICAL <span className="text-neon">LOGS</span> &amp; THOUGHTS
+              TECHNICAL <span className="text-neon">LOGS </span> &amp; THOUGHTS
             </h1>
             <p className="max-w-2xl font-mono text-xs sm:text-sm text-zinc-400 uppercase tracking-wider leading-relaxed">
               [RAW TECHNICAL ESSAYS &amp; ARCHITECTURAL PERSPECTIVES] — DOKUMENTASI PERJALANAN DARI INFRASTRUKTUR JARINGAN MIKROTIK (SMK TKJ) HINGGA REKAYASA PERANGKAT LUNAK MODERN (UMBY INFORMATICS) &amp; SELEKSI GLOBAL GOOGLE STUDENT AMBASSADOR 2026.

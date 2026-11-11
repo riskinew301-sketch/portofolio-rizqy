@@ -11,10 +11,6 @@ export const MilestonesSection: React.FC = () => {
       <div className="max-w-6xl mx-auto space-y-16">
         {/* ── Section Header ── */}
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon mb-3">
-            <span className="w-2 h-2 bg-neon" />
-            <span>02 // LEADERSHIP & RECOGNITION</span>
-          </div>
           <h2 className="font-mono text-3xl sm:text-4xl font-bold text-zinc-100">
             Milestones & Verified Credentials
           </h2>

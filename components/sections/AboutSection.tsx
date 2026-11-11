@@ -11,10 +11,6 @@ export const AboutSection: React.FC = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-12">
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon mb-3">
-            <span className="w-2 h-2 bg-neon" />
-            <span>01 // ARCHITECTURE & EVOLUTION</span>
-          </div>
           <h2 className="font-mono text-3xl sm:text-4xl font-bold text-zinc-100">
             From Routing Tables to Component Trees
           </h2>

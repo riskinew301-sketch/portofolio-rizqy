@@ -27,11 +27,7 @@ export default function ProjectsPage() {
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon">
               <span className="w-2 h-2 bg-neon" />
-              <span>04 // SOFTWARE ARCHIVE</span>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-1.5 border border-zinc-800 bg-zinc-900/60 font-mono text-xs text-zinc-400">
-              <Terminal className="w-3.5 h-3.5 text-neon" />
-              <span>TOTAL ARTIFACTS: {allProjects.length} PROJECTS</span>
+              <span>SOFTWARE ARCHIVE</span>
             </div>
           </div>
 

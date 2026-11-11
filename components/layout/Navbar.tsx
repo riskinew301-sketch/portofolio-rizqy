@@ -37,9 +37,6 @@ export const Navbar: React.FC = () => {
             <span className="font-mono text-xs font-bold text-zinc-100 group-hover:text-neon transition-colors">
               {siteContent.profile.name.toUpperCase()}
             </span>
-            <span className="font-mono text-[10px] text-zinc-400 tracking-wider">
-              DEV // GSA &apos;26
-            </span>
           </div>
         </Link>
 

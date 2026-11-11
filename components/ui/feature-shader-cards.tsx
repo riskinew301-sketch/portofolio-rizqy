@@ -8,6 +8,7 @@ import {
   Compass,
   Calculator,
   BrainCircuit,
+  LayoutGrid,
   ArrowUpRight,
   ExternalLink,
   GitBranch,
@@ -58,6 +59,14 @@ const shaderConfigs: Record<
     swirl: 0.85,
     shape: "checks",
   },
+  "gudang-meme": {
+    colors: ["#030a01", "#33ff33", "#0a1f04", "#00cc00"],
+    icon: <LayoutGrid className="w-6 h-6" />,
+    speed: 1.4,
+    distortion: 0.22,
+    swirl: 0.78,
+    shape: "stripes",
+  },
 };
 
 const defaultConfig = {
@@ -78,10 +87,6 @@ export const FeaturesCards: React.FC = () => {
         {/* ── Section Header ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon mb-3">
-              <span className="w-2 h-2 bg-neon" />
-              <span>03 // CORE WORK &amp; SYSTEMS</span>
-            </div>
             <h2 className="font-mono text-3xl sm:text-4xl font-bold text-zinc-100">
               Featured Case Studies
             </h2>

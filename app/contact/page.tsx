@@ -73,7 +73,7 @@ export default function ContactPage() {
         <div className="border-b border-zinc-800 pb-10 space-y-4">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon">
             <span className="w-2 h-2 bg-neon" />
-            <span>05 // COMMUNICATION CHANNEL</span>
+            <span>COMMUNICATION CHANNEL</span>
           </div>
 
           <h1 className="font-mono text-4xl sm:text-5xl md:text-6xl font-black text-zinc-100 tracking-tight">
@@ -91,8 +91,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-8">
             <div className="p-8 border border-zinc-800 bg-zinc-900/40 space-y-6 sharp-card">
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-neon">
-                <Terminal className="w-4 h-4 text-neon" />
-                <span>DIRECT ACCESS // INFO</span>
+                <span>DIRECT ACCESS & INFO</span>
               </div>
 
               <div className="space-y-4">

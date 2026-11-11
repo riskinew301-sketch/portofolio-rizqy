@@ -8,7 +8,6 @@ import {
   Users,
   Code,
   CheckCircle2,
-  Terminal,
   FolderGit2,
   Layers,
   Award,
@@ -63,19 +62,11 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
             <span className="font-mono text-xs uppercase tracking-widest px-3 py-1 border border-neon/40 bg-neon/10 text-neon font-bold">
               {project.category}
             </span>
-            <span className="font-mono text-xs text-zinc-500 hidden sm:inline">
-              SLUG // {project.slug.toUpperCase()}
-            </span>
           </div>
         </div>
 
         {/* ── Project Header ── */}
         <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 border border-zinc-800 bg-zinc-900/50 font-mono text-xs text-zinc-400">
-            <Terminal className="w-3.5 h-3.5 text-neon" />
-            <span>CASE STUDY // SYSTEM ENGINEERING &amp; UI DESIGN</span>
-          </div>
-
           <h1 className="font-mono text-3xl sm:text-4xl md:text-5xl font-black text-zinc-100 tracking-tight leading-tight">
             {project.title}
           </h1>
@@ -115,10 +106,14 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
         <div className="space-y-6">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon">
             <Layers className="w-4 h-4 text-neon" />
-            <span>01 // ARCHITECTURAL OVERVIEW &amp; PROBLEM STATEMENT</span>
+            <span>ARCHITECTURAL OVERVIEW &amp; PROBLEM STATEMENT</span>
           </div>
           <div className="p-8 border border-zinc-800 bg-zinc-900/40 space-y-4 text-zinc-300 leading-relaxed sharp-card font-sans text-base sm:text-lg">
-            <p>{project.fullDescription}</p>
+            {project.fullDescription.split("\n\n").map((para, i) => (
+              <p key={i} className="whitespace-pre-line leading-relaxed">
+                {para}
+              </p>
+            ))}
           </div>
         </div>
 
@@ -126,7 +121,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
         <div className="space-y-6">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon">
             <Code className="w-4 h-4 text-neon" />
-            <span>02 // TECHNOLOGY STACK &amp; FRAMEWORKS</span>
+            <span>TECHNOLOGY STACK &amp; FRAMEWORKS</span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {project.techStack.map((tech, idx) => (
@@ -147,7 +142,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon">
                 <Users className="w-4 h-4 text-neon" />
-                <span>03 // TEAM COLLABORATION &amp; CREDITS</span>
+                <span>TEAM COLLABORATION &amp; CREDITS</span>
               </div>
               <span className="font-mono text-xs text-zinc-500">
                 {project.collaborators.length} CONTRIBUTOR(S)

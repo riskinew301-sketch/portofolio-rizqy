@@ -24,15 +24,17 @@ const projectsAsOffers: Offer[] = siteContent.projects.map((project) => ({
 // Per-project Unsplash images so each card looks distinct
 const COVER_IMAGES: Record<string, string> = {
   esl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-  "pariwisata-diy": "/projects/pariwisata-diy-cover.png",
+  "pariwisata-diy": "/projects/pariwisata-diy-cover.jpg",
   "laba-pintar": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80",
-  "bk-service-web": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
+  "bk-service-web": "/projects/bk-service-cover.jpg",
+  "gudang-meme": "/projects/gudang-meme-icon.png",
 };
 
 const offers: Offer[] = siteContent.projects.map((project) => ({
   id: project.slug,
   imageSrc: COVER_IMAGES[project.slug] ?? projectsAsOffers.find((o) => o.id === project.slug)?.imageSrc ?? "",
   imageAlt: project.tagline,
+  imageContain: project.slug === "gudang-meme",
   tag: project.category,
   title: project.title,
   description: project.tagline,
@@ -48,10 +50,6 @@ export const FeaturedProjectsSection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-neon mb-3">
-              <span className="w-2 h-2 bg-neon" />
-              <span>03 // CORE WORK &amp; SYSTEMS</span>
-            </div>
             <h2 className="font-mono text-3xl sm:text-4xl font-bold text-zinc-100">
               Featured Case Studies
             </h2>
