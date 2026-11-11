@@ -1,11 +1,28 @@
 "use client";
 
 import React from "react";
-import { Globe, ShieldCheck, ExternalLink } from "lucide-react";
+import { Globe, ShieldCheck, ExternalLink, Award, Users, Cpu, Server } from "lucide-react";
 import { siteContent } from "@/data/content";
 import { CertificateAccordion } from "@/components/ui/certificate-accordion";
 
+const getMilestoneIcon = (id: string) => {
+  switch (id) {
+    case "gsa-2026":
+      return <Award className="w-5 h-5" />;
+    case "himaka-2026":
+      return <Users className="w-5 h-5" />;
+    case "aslab-umby":
+      return <Cpu className="w-5 h-5" />;
+    case "rsud-wonosari":
+      return <Server className="w-5 h-5" />;
+    default:
+      return <Globe className="w-5 h-5" />;
+  }
+};
+
 export const MilestonesSection: React.FC = () => {
+  const milestones = siteContent.milestones;
+
   return (
     <section className="w-full border-b border-zinc-800 bg-zinc-950 py-24 px-6">
       <div className="max-w-6xl mx-auto space-y-16">
@@ -16,27 +33,32 @@ export const MilestonesSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* ── Major Milestones Grid (GSA 2026 & KPN 2026) ── */}
+        {/* ── Major Milestones Grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {siteContent.milestones.map((milestone) => (
-            <div
-              key={milestone.id}
-              className="group relative border border-zinc-800 bg-zinc-900/40 p-8 flex flex-col justify-between hover:border-neon hover:bg-zinc-900/80 transition-all sharp-card"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-neon">
-                    {milestone.highlight}
-                  </span>
-                  <span className="font-mono text-xs px-2.5 py-1 border border-neon/40 bg-neon/10 text-neon font-bold">
-                    {milestone.year}
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 border border-zinc-700 bg-zinc-950 flex items-center justify-center text-neon group-hover:border-neon transition-colors">
-                    <Globe className="w-5 h-5" />
+          {milestones.map((milestone, index) => {
+            const isLastOdd =
+              milestones.length % 2 === 1 && index === milestones.length - 1;
+            return (
+              <div
+                key={milestone.id}
+                className={`group relative border border-zinc-800 bg-zinc-900/40 p-8 flex flex-col justify-between hover:border-neon hover:bg-zinc-900/80 transition-all sharp-card ${
+                  isLastOdd ? "md:col-span-2" : ""
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-mono text-xs font-bold uppercase tracking-widest text-neon">
+                      {milestone.highlight}
+                    </span>
+                    <span className="font-mono text-xs px-2.5 py-1 border border-neon/40 bg-neon/10 text-neon font-bold">
+                      {milestone.year}
+                    </span>
                   </div>
+
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 border border-zinc-700 bg-zinc-950 flex items-center justify-center text-neon group-hover:border-neon transition-colors shrink-0">
+                      {getMilestoneIcon(milestone.id)}
+                    </div>
                   <div>
                     {milestone.credentialUrl ? (
                       <a
@@ -90,7 +112,8 @@ export const MilestonesSection: React.FC = () => {
                 </div>
               )}
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* ── Skills & Certifications Accordion ── */}
@@ -101,7 +124,7 @@ export const MilestonesSection: React.FC = () => {
                 Professional Certifications
               </h3>
               <p className="text-sm text-zinc-400 mt-1">
-                Expandable credential archive spanning networking infrastructure and frontend engineering.
+                Expandable credential archive spanning networking infrastructure, software engineering, and AI education.
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400 bg-zinc-900 px-3 py-1.5 border border-zinc-800">

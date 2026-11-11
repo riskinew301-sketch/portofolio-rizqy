@@ -36,7 +36,7 @@ export default function ProjectsPage() {
               Projects <span className="text-zinc-600">&amp;</span> Case Studies
             </h1>
             <p className="max-w-3xl text-base sm:text-lg text-zinc-300 font-sans leading-relaxed">
-              Koleksi proyek rekayasa perangkat lunak terpilih dari masa eksplorasi jaringan (SMK TKJ) hingga pengembangan sistem web berkinerja tinggi, Super-App EdTech, dan integrasi Generative AI (Informatika UMBY).
+              Koleksi proyek rekayasa perangkat lunak terpilih—dari fondasi infrastruktur jaringan (SMK TKJ, RSUD Wonosari &amp; Asisten Praktikum UMBY) hingga pengembangan platform web SaaS UMKM, portal pariwisata, media edukasi interaktif, dan aplikasi sosial kolaboratif.
             </p>
           </div>
 

@@ -41,7 +41,7 @@ export const HeroSection: React.FC = () => {
           {/* Main Headline */}
           <div className="space-y-4">
             <h1 className="font-mono text-4xl sm:text-5xl md:text-6xl font-black text-zinc-100 tracking-tight leading-tight">
-              Web Developer & Network Engineer <span className="text-zinc-500">|</span>{" "}
+              Software & Network Engineer <span className="text-zinc-500">|</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon via-neon to-zinc-200">
                 Google Student Ambassador 2026
               </span>

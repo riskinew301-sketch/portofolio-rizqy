@@ -27,14 +27,6 @@ const shaderConfigs: Record<
     shape: "checks" | "stripes" | "edge";
   }
 > = {
-  esl: {
-    colors: ["#030a01", "#00FF00", "#0a1f04", "#00cc00"],
-    icon: <School className="w-6 h-6" />,
-    speed: 1.2,
-    distortion: 0.2,
-    swirl: 0.75,
-    shape: "checks",
-  },
   "pariwisata-diy": {
     colors: ["#050d02", "#33ff33", "#071a03", "#00e600"],
     icon: <Compass className="w-6 h-6" />,

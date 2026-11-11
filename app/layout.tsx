@@ -5,16 +5,18 @@ import { Footer } from "@/components/layout/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 
 export const metadata: Metadata = {
-  title: "Rizqy Naufal Pradana — Frontend Developer | Google Student Ambassador '26",
+  title: "Rizqy Naufal Pradana — Software & Network Engineer | Google Student Ambassador '26",
   description:
-    "Interactive Personal Portfolio of Rizqy Naufal Pradana — Frontend Developer, Google Student Ambassador '26, and Network Engineering Enthusiast.",
+    "Interactive Personal Portfolio of Rizqy Naufal Pradana — Informatics Scholar at UMBY specializing in Computer Networking, Software Engineering, AIoT, and AI-Assisted Engineering.",
   keywords: [
     "Rizqy Naufal Pradana",
-    "Frontend Developer",
+    "Software Engineer",
+    "Network Engineer",
+    "AI-Assisted Engineering",
     "Google Student Ambassador",
     "Next.js",
+    "Laravel",
     "TypeScript",
-    "Tailwind CSS",
   ],
 };
 
